@@ -1,5 +1,5 @@
-
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -7,14 +7,14 @@ body, html {
 }
 
 
-#video-bg {
+.video {
   position: fixed;
   top: 0;
   left: 0;
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
-  z-index: -1; 
+  z-index: -1;
 }
 
 
@@ -30,39 +30,59 @@ body, html {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
-  
+
 }
-.goku{
-    height: 100px;
-    width: 100px;
-   
-    
+
+.goku {
+  height: 100px;
+  width: 100px;
+
+
 }
-.veggeta{
-    height: 100px;
-    width: 100px;
-    margin-left: 15%;
-    
+
+.veggeta {
+  height: 100px;
+  width: 100px;
+  margin-left: 15%;
+
 }
-button{
-    font-size: 50px;
-    cursor: pointer;
+
+button {
+  font-size: 50px;
+  cursor: pointer;
 }
-button:hover{
-    opacity: 0.5;
+
+button:hover {
+  opacity: 0.5;
 }
-p{
+
+p {
   display: flex;
-    font-size: 20px;
-    font-weight: 800;
-    display: inline-block;
-    gap: 20px;
+  font-size: 20px;
+  font-weight: 800;
+  display: inline-block;
+  gap: 20px;
 }
-.title{
+
+.title {
   display: flex;
   height: 200px;
   width: 300px;
   margin-left: auto;
   margin-right: auto;
   opacity: 0.5;
+}
+
+@media screen and (max-width:1000px) {
+  .video {
+    width: 50%;
+  }
+
+  .container {
+    margin-top: 30%;
+  }
+  .title{
+    margin-top: 30%;
+  }
+
 }

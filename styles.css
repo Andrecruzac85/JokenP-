@@ -1,0 +1,60 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+#video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+
+.container {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  text-align: center;
+  opacity: 0.8;
+  border-radius: 10px;
+  padding: 10px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  
+}
+.goku{
+    height: 100px;
+    width: 100px;
+   
+    
+}
+.veggeta{
+    height: 100px;
+    width: 100px;
+    margin-left: 15%;
+    
+}
+button{
+    font-size: 50px;
+    cursor: pointer;
+}
+button:hover{
+    opacity: 0.5;
+}
+p{
+  display: flex;
+    font-size: 20px;
+    font-weight: 800;
+    display: inline-block;
+    gap: 20px;
+}

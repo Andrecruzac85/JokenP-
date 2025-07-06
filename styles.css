@@ -29,7 +29,7 @@ body, html {
   width: 250px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10%;
+  margin-top: 5%;
   
 }
 .goku{
@@ -57,4 +57,12 @@ p{
     font-weight: 800;
     display: inline-block;
     gap: 20px;
+}
+.title{
+  display: flex;
+  height: 200px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.5;
 }

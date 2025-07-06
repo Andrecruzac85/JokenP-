@@ -19,6 +19,7 @@ html {
 
 
 .container {
+ 
   position: relative;
   z-index: 1;
   background-color: #ffffff;
@@ -33,9 +34,11 @@ html {
 
 }
 
+
 .goku {
   height: 100px;
   width: 100px;
+  margin-left: 10%;
 
 
 }
@@ -43,7 +46,7 @@ html {
 .veggeta {
   height: 100px;
   width: 100px;
-  margin-left: 15%;
+ margin-left: 5%;
 
 }
 

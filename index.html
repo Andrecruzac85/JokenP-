@@ -10,9 +10,10 @@
 </head>
 
 <body>/
-    <audio autoplay loop hidden>
-        <source src="./assets/music.mp3" type="audio/mpeg">
-    </audio>
+   <audio id="bg-music" loop hidden>
+    <source src="./assets/music.mp3" type="audio/mpeg">
+</audio>
+
 
     <video autoplay muted loop class="video">
         <source src="./assets/dragon.mp4" type="video/mp4">
@@ -25,7 +26,7 @@
             <button class="papel" onclick="playhuman('papel')">&#x1F590</button>
             <button class="tesoura" onclick="playhuman('tesoura')">&#x270C</button>
             <img class="victory" alt="">
-            <img class="boo" src="" alt="">
+            
             <p class="result"></p>
         </div>
         

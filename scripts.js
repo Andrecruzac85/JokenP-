@@ -8,6 +8,14 @@ const machineScore = document.querySelector('.scoreVeggeta')
 const result = document.querySelector('.result')
 let humanScoreNumber = 0
 let machineScoreNumber = 0
+const bgMusic = document.getElementById("bg-music");
+
+document.addEventListener('click', () => {
+    if (bgMusic.paused) {
+        bgMusic.play().catch(e => console.log("Erro ao tentar tocar música:", e));
+    }
+}, { once: true }); // Garante que só executa no primeiro clique
+
 const playhuman = (humanChoice) => {
     const machineChoice = playMachine(); // executa a função e pega o valor
     playTheGame(humanChoice, machineChoice);

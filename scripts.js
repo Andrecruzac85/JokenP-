@@ -1,5 +1,8 @@
+const veggetaChoice = document.querySelector('.veggetaChoice')
+const audioBoo = document.querySelector('audio-boo')
+const boo = document.querySelector('.boo')
 const audioGoku = document.getElementById("audio-goku");
-const audioVegeta = document.getElementById("audio-vegeta");
+const audioVeggeta = document.getElementById("audio-veggeta");
 const humanScore = document.querySelector('.scoreGoku')
 const machineScore = document.querySelector('.scoreVeggeta')
 const result = document.querySelector('.result')
@@ -27,17 +30,30 @@ const playTheGame = (human, machine) => {
         humanScoreNumber++
         humanScore.innerHTML = humanScoreNumber
         result.innerHTML = 'Goku Venceu'
-       
         audioGoku.play();
 
     } else {
         machineScoreNumber++
         machineScore.innerHTML = machineScoreNumber
         result.innerHTML = 'Veggeta venceu'
-        
-        audioVegeta.play();
+        audioVeggeta.play();
 
     }
+    // mostra visualmente a escolha da máquina
+    if (machine === 'pedra') {
+        veggetaChoice.innerHTML = 'Veggeta escolheu &#x270A';
+    } else if (machine === 'papel') {
+        veggetaChoice.innerHTML = 'Veggeta escolheu &#x1F590';
+    } else if (machine === 'tesoura') {
+        veggetaChoice.innerHTML = 'Veggeta escolheu &#x270C';
+    }
 
+    if ((humanScoreNumber === 5) || (machineScoreNumber === 5)) {
+        audioBoo.play();
+        boo.src = "./assets/majin boo.gif";
+        boo.style.display = "block";
+        gameOver = true;
+
+    }
 
 }

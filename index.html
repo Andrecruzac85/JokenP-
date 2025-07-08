@@ -10,18 +10,25 @@
 </head>
 
 <body>/
+    <audio autoplay loop hidden>
+        <source src="./assets/music.mp3" type="audio/mpeg">
+    </audio>
+
     <video autoplay muted loop class="video">
         <source src="./assets/dragon.mp4" type="video/mp4">
     </video>
     <div class="container">
         <h1>JokenPô</h1>
+        <p class="veggetaChoice"></p>
         <div class="button">
             <button class="pedra" onclick="playhuman('pedra')">&#x270A</button>
             <button class="papel" onclick="playhuman('papel')">&#x1F590</button>
             <button class="tesoura" onclick="playhuman('tesoura')">&#x270C</button>
+            <img class="victory" alt="">
+            <img class="boo" src="" alt="">
             <p class="result"></p>
         </div>
-
+        
         <p>Goku <span class="scoreGoku">0</span></p>
         <p>Vegeta <span class="scoreVeggeta">0</span></p>
         <div class="img">
@@ -31,7 +38,9 @@
     </div>
     <img class="title" src="./assets/DRAGON-BALL-06-07-2025.png" alt="letreiro">
     <audio id="audio-goku" src="./assets/goku.mp3"></audio>
-    <audio id="audio-vegeta" src="./assets/veggeta.mp3"></audio>
+    <audio id="audio-veggeta" src="./assets/veggeta.mp3"></audio>
+    <audio id="audio-boo" src="./assets/chega.mp3"></audio>
+
 </body>
 <script src="./scripts.js"></script>
 

@@ -9,6 +9,7 @@ const result = document.querySelector('.result')
 let humanScoreNumber = 0
 let machineScoreNumber = 0
 const bgMusic = document.getElementById("bg-music");
+const restartBtn = document.querySelector('.restart-btn');
 
 document.addEventListener('click', () => {
     if (bgMusic.paused) {
@@ -56,12 +57,29 @@ const playTheGame = (human, machine) => {
         veggetaChoice.innerHTML = 'Veggeta escolheu &#x270C';
     }
 
-    if ((humanScoreNumber === 5) || (machineScoreNumber === 5)) {
-        audioBoo.play();
-        boo.src = "./assets/majin boo.gif";
-        boo.style.display = "block";
-        gameOver = true;
+   if ((humanScoreNumber === 5) || (machineScoreNumber === 5)) {
+    audioBoo.play();
+    boo.src = "./assets/majin boo.gif";
+    boo.style.display = "block";
+    boo.style.opacity = "1";
+    restartBtn.style.display = "block"; // mostra o botão
+    gameOver = true;
+}
 
     }
+    
 
+function restartGame() {
+    humanScoreNumber = 0;
+    machineScoreNumber = 0;
+    humanScore.innerHTML = humanScoreNumber;
+    machineScore.innerHTML = machineScoreNumber;
+    result.innerHTML = '';
+    veggetaChoice.innerHTML = '';
+    boo.style.display = 'none';
+    restartBtn.style.display = 'none';
+    gameOver = false;
 }
+
+
+

@@ -1,5 +1,5 @@
 const veggetaChoice = document.querySelector('.veggetaChoice')
-const audioBoo = document.querySelector('audio-boo')
+const audioBoo = document.getElementById("audio-boo");
 const boo = document.querySelector('.boo')
 const audioGoku = document.getElementById("audio-goku");
 const audioVeggeta = document.getElementById("audio-veggeta");

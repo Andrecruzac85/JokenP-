@@ -16,10 +16,10 @@ document.addEventListener('click', () => {
     if (bgMusic.paused) {
         bgMusic.play().catch(e => console.log("Erro ao tentar tocar música:", e));
     }
-}, { once: true }); 
+}, { once: true });
 
 const playhuman = (humanChoice) => {
-    const machineChoice = playMachine(); 
+    const machineChoice = playMachine();
     playTheGame(humanChoice, machineChoice);
 }
 
@@ -60,12 +60,15 @@ const playTheGame = (human, machine) => {
 
     if (humanScoreNumber === 5) {
         win.innerHTML = 'YOU WIN'
+
         win.style.display = 'block';
         audioBoo.play();
         boo.src = "./assets/majin boo.gif";
         boo.style.display = "block";
         boo.style.opacity = "1";
-        restartBtn.style.display = "block"; 
+        restartBtn.style.display = "block";
+        bgMusic.pause();
+        bgMusic.currentTime = 0; 
         gameOver = true;
     }
     if (machineScoreNumber === 5) {
@@ -76,6 +79,8 @@ const playTheGame = (human, machine) => {
         boo.style.display = "block";
         boo.style.opacity = "1";
         restartBtn.style.display = "block";
+        bgMusic.pause();
+        bgMusic.currentTime = 0; 
         gameOver = true;
     }
 }

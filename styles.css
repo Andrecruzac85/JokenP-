@@ -19,7 +19,7 @@ html {
 
 
 .container {
- 
+
   position: relative;
   z-index: 1;
   background-color: #ffffff;
@@ -46,7 +46,7 @@ html {
 .veggeta {
   height: 100px;
   width: 100px;
- margin-left: 5%;
+  margin-left: 5%;
 
 }
 
@@ -75,6 +75,7 @@ p {
   margin-right: auto;
   opacity: 0.5;
 }
+
 .boo {
   opacity: 1;
   display: none;
@@ -82,30 +83,47 @@ p {
   top: 50%;
   left: 30%;
   transform: translate(-50%, -50%);
-  width:800px;
-  height: 600px; 
+  width: 800px;
+  height: 600px;
   z-index: 10;
 }
+
 .restart-btn {
-    display: none;
-    position: fixed;
-    top: 90%;
-    left: 47%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    z-index: 10000;
+  display: none;
+  position: fixed;
+  top: 90%;
+  left: 47%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 10000;
 }
 
 .restart-btn:hover {
-    background-color: #d32f2f;
+  background-color: #d32f2f;
 }
 
+.win {
+  
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 800;
+  font-size: 50px;
+  color: #d32f2f;
+  display: none;
+  position: absolute;
+  top: 90%;
+  left: 35%;
+
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  z-index: 10000;
+}
 
 @media screen and (max-width:1000px) {
   .video {
@@ -115,19 +133,21 @@ p {
   .container {
     margin-top: 10%;
   }
-  .title{
+
+  .title {
     margin-top: 5%;
   }
-.boo {
-  display: none;
-  position: absolute;
-  top: 70%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  width: 1000px;
-  height: 800px; 
-  z-index: 10;
-}
+
+  .boo {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 800px;
+    z-index: 10;
+  }
 
 
 

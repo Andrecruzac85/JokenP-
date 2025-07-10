@@ -1,3 +1,4 @@
+const win = document.querySelector('.win')
 const veggetaChoice = document.querySelector('.veggetaChoice')
 const audioBoo = document.getElementById("audio-boo");
 const boo = document.querySelector('.boo')
@@ -15,10 +16,10 @@ document.addEventListener('click', () => {
     if (bgMusic.paused) {
         bgMusic.play().catch(e => console.log("Erro ao tentar tocar música:", e));
     }
-}, { once: true }); // Garante que só executa no primeiro clique
+}, { once: true }); 
 
 const playhuman = (humanChoice) => {
-    const machineChoice = playMachine(); // executa a função e pega o valor
+    const machineChoice = playMachine(); 
     playTheGame(humanChoice, machineChoice);
 }
 
@@ -48,7 +49,7 @@ const playTheGame = (human, machine) => {
         audioVeggeta.play();
 
     }
-    // mostra visualmente a escolha da máquina
+
     if (machine === 'pedra') {
         veggetaChoice.innerHTML = 'Veggeta escolheu &#x270A';
     } else if (machine === 'papel') {
@@ -57,17 +58,28 @@ const playTheGame = (human, machine) => {
         veggetaChoice.innerHTML = 'Veggeta escolheu &#x270C';
     }
 
-   if ((humanScoreNumber === 5) || (machineScoreNumber === 5)) {
-    audioBoo.play();
-    boo.src = "./assets/majin boo.gif";
-    boo.style.display = "block";
-    boo.style.opacity = "1";
-    restartBtn.style.display = "block"; // mostra o botão
-    gameOver = true;
+    if (humanScoreNumber === 5) {
+        win.innerHTML = 'YOU WIN'
+        win.style.display = 'block';
+        audioBoo.play();
+        boo.src = "./assets/majin boo.gif";
+        boo.style.display = "block";
+        boo.style.opacity = "1";
+        restartBtn.style.display = "block"; 
+        gameOver = true;
+    }
+    if (machineScoreNumber === 5) {
+        win.innerHTML = 'YOU LOSE'
+        win.style.display = 'block';
+        audioBoo.play();
+        boo.src = "./assets/majin boo.gif";
+        boo.style.display = "block";
+        boo.style.opacity = "1";
+        restartBtn.style.display = "block";
+        gameOver = true;
+    }
 }
 
-    }
-    
 
 function restartGame() {
     humanScoreNumber = 0;
@@ -78,6 +90,7 @@ function restartGame() {
     veggetaChoice.innerHTML = '';
     boo.style.display = 'none';
     restartBtn.style.display = 'none';
+    win.style.display = 'none';
     gameOver = false;
 }
 
